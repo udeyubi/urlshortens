@@ -1,5 +1,5 @@
-<p align="center">
-    <a href="http://glxs.de" target="_blank">縮網址</a>
+<p>
+    <a href="http://glxs.de" target="_blank">http://glxs.de</a>
 </p>
 
 功能說明
@@ -11,6 +11,7 @@
 
 建置環境
 <ul>
+    <li>linode VPS</li>
     <li>ubuntu 20 LTS</li>
     <li>laravel 8.x</li>
     <li>Docker version 20.10.12</li>
