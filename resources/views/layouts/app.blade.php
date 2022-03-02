@@ -28,7 +28,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <span class="fw-bold text-primary">
-                        {{ config('app.name', 'Laravel') }}<sup class="badge rounded-pill bg-success">urlshorts</sup>
+                        {{ config('app.name', 'Laravel') }}<sup class="badge text-success">urlshorts</sup>
                     </span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
