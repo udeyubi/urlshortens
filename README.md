@@ -1,5 +1,5 @@
 <p>
-    <a href="http://glxs.de" target="_blank">http://glxs.de</a>
+    <a href="http://glxs.de" target="_blank">https://glxs.de</a>
 </p>
 
 功能說明
