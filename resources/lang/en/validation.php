@@ -145,6 +145,10 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'url' => [
+            'required'  => '請輸入網址',
+            'url'=> '請輸入合法的網址'
+        ],
     ],
 
     /*
