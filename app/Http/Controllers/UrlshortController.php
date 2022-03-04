@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Urlshort;
+use App\Rules\not_self_domain;
 use Illuminate\Http\Request;
 
 class UrlshortController extends Controller
@@ -13,7 +14,7 @@ class UrlshortController extends Controller
 
     function store(Request $request){
         $validated = $request->validate([
-            'url'=>'required|url'
+            'url'=>['required','url',new not_self_domain]
         ]);
 
         $url = request('url');
