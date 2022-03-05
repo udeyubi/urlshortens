@@ -22,7 +22,7 @@
     <!--Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -55,6 +55,11 @@
             </div>
         </main>
     </div>
+
+    <footer class="footer mt-auto bg-light text-center">
+        <span class="mt-4">© {{ env('APP_NAME') }} {{ date('Y') }}</span>
+    </footer>
+
 </body>
 </html>
 @yield('scripts')
