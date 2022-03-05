@@ -27,7 +27,9 @@ class UrlshortController extends Controller
         if( $id == '0' ){
             $id = Urlshort::getID();
         }
-        return view('urlshorts.index',compact('id','url'));
+        $domain_name = request()->getHost();
+        $shorten_url = "$domain_name/$id";
+        return view('urlshorts.index',compact('shorten_url','url'));
     }
 
     function redirect(Urlshort $urlshorts){

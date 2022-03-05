@@ -13,11 +13,11 @@
     @enderror
     
 
-    @if ( isset($id) )
+    @if ( isset($shorten_url) )
         <div class="position-absolute w-50 top-50 start-50 translate-middle text-center">
             <p class="fs-4 fw-bolder text-success">短網址已準備完成!</p>
             <div class="input-group mb-1">
-                <input type="text" id="shortenURL" class="form-control" value="{{ route('urlshorts.redirect',$id) }}" readonly>
+                <input type="text" id="shortenURL" class="form-control" value="{{ $shorten_url }}" readonly>
                 <button class="btn btn-outline-secondary" type="button" id="copyButton" onclick="copy()">複製!</button>
             </div>
             <div class="text-start text-break">

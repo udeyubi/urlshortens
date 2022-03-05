@@ -3,6 +3,7 @@
 namespace App\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
+use Illuminate\Support\Str;
 
 class not_self_domain implements Rule
 {
@@ -25,6 +26,9 @@ class not_self_domain implements Rule
      */
     public function passes($attribute, $value)
     {
+        if( !Str::startsWith($value , ['http://' , 'https://' ]) ){
+            $value = 'https://' . $value;
+        }
         $domain = parse_url($value);
         $domain = $domain['host'];
         return $domain != request()->getHost();
