@@ -9,29 +9,7 @@ use Illuminate\Support\Str;
 class Urlshort extends Model
 {
     use HasFactory;
-    protected $fillable = ['url'];
+    protected $fillable = ['id','url'];
     protected $casts = ['id' => 'string'];
-    public static $id;
-
-    public static function boot(){
-        parent::boot();
-        self::creating(function ($model) {
-            self::$id = genID();
-            $model->id = self::$id;
-        });
-    }
-
-    public static function getID(){
-        return self::$id;
-    }
-}
-
-function genID(){
-    // 避免重複
-    while(1){
-        $id = (string) Str::random(7);
-        if(Urlshort::where('id',$id)->count() == 0){
-            return $id;
-        }
-    }
+    public $incrementing = false; // 避免id寫入時總是為0
 }
