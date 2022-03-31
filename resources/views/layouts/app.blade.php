@@ -57,7 +57,7 @@
     </div>
 
     <footer class="footer mt-auto bg-light text-center">
-        <span class="mt-4">© {{ env('APP_NAME') }} {{ date('Y') }}</span>
+        <span class="mt-4">© {{ config('app.name', 'Laravel') }} {{ date('Y') }}</span>
     </footer>
 
 </body>
