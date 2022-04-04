@@ -16,15 +16,15 @@
     
     <div class="w-100 d-flex flex-column align-items-center mt-2">
         <div class="w-50 text-center my-2" style="min-height: 115px">
-            @if ( isset($shorten_url) )
+            @if ( !empty(session('shorten_url')) )
                 <p class="fs-4 fw-bolder text-success">短網址已準備完成!</p>
                 <div class="input-group mb-1">
-                    <input type="text" id="shortenURL" class="form-control" value="{{ $shorten_url }}" readonly>
+                    <input type="text" id="shortenURL" class="form-control" value="{{ session('shorten_url') }}" readonly>
                     <button class="btn btn-outline-secondary" style="outline: none; box-shadow: none;" type="button" id="copyButton" onclick="copy('shortenURL')">複製!</button>
                 </div>
                 <div class="text-start text-break">
                     原網址：
-                    <a class="" href="{{ $url }}" target="_blank">{{ $url }}</a>
+                    <a class="" href="{{ session('url') }}" target="_blank">{{ session('url') }}</a>
                 </div>
             @endif
         </div>

@@ -46,9 +46,8 @@ class UrlshortController extends Controller
             $url_history = array_unique($url_history);
         }
         $cookie = cookie('url_history',json_encode($url_history));
-        $url_histories = getUrlHistoriesFromCookie($url_history);
 
-        return response(view('urlshorts.index',compact('shorten_url','url','url_histories')))->withCookie($cookie);
+        return redirect()->route('urlshorts.index')->with( compact('shorten_url','url') )->withCookie($cookie);
     }
 
     function redirect(Urlshort $urlshorts){
