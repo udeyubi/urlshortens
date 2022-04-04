@@ -59,6 +59,20 @@
             @endif
         </div>
     </div>
+
+    <!--Google Adsense-->
+    <div class="position-fixed start-0 translate-middle-y " style="height: 550px;width: 200px;top:55%">
+        <ins class="adsbygoogle"
+            style="display:inline-block;width:200px;height:550px"
+            data-ad-client="ca-pub-6085689567003483"
+            data-ad-slot="1901268248"></ins>
+    </div>
+    <div class="position-fixed end-0 translate-middle-y " style="height: 550px;width: 200px;top:55%">
+        <ins class="adsbygoogle"
+            style="display:inline-block;width:200px;height:550px"
+            data-ad-client="ca-pub-6085689567003483"
+            data-ad-slot="1901268248"></ins>
+    </div>
 @endsection
 
 @section('scripts')
@@ -78,5 +92,9 @@
             document.getElementById('submit').blur();
             alert("已複製!");
         }
+    </script>
+
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 @endsection
