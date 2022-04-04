@@ -25,6 +25,11 @@
 
     <!--Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <meta property="og:url"                content="https://glxs.de/" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="{{ env('APP_TITLE') }}" />
+    <meta property="og:description"        content="{{ env('APP_DESCRIPTION') }}" />
 </head>
 <body class="d-flex flex-column min-vh-100">
     <div id="app">
