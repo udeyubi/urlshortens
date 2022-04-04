@@ -50,7 +50,7 @@
                                     <small>最近使用：{{ date('Y-m-d H:i:s',strtotime($history_row->updated_at)) }}</small>
                                 </div>
                             </a>
-                            <a href="/{{$history_row->id}}" target="_blank" class="btn btn-outline-primary position-absolute bottom-0 start-50 translate-middle-x" style="height:20px;width:300px;z-index:1">
+                            <a href="/{{$history_row->id}}" target="_blank" class="btn btn-outline-primary border-bottom-0 position-absolute bottom-0 start-50 translate-middle-x" style="height:20px;width:300px;z-index:1">
                                 <i class="bi bi-box-arrow-in-right position-absolute top-0 start-50 translate-middle-x"></i>
                             </a>
                         </div>
