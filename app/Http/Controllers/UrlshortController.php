@@ -6,12 +6,20 @@ use App\Models\Urlshort;
 use App\Rules\not_self_domain;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 class UrlshortController extends Controller
 {
     function index(){
-        $url_shorts = Urlshort::all();
+        $ids = json_decode(request('ids'));
+        $url_shorts = Urlshort::whereRaw('1=1');
+
+        if($ids){
+            $url_shorts = Urlshort::whereIn('id',$ids);
+        }
+
+        $url_shorts = $url_shorts->get();
         return response($url_shorts,Response::HTTP_OK);
     }
 
